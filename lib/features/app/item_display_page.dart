@@ -14,8 +14,17 @@ class ItemDisplayPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(item.name),
       ),
-      body: Center(
-        child: ItemDisplay(item: item,),
+      body: DecoratedBox(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("${imagePath}custom_item_page_background.png"),
+          ),
+        ),
+        child: Center(
+          child: ItemDisplay(
+            item: item,
+          ),
+        ),
       ),
     );
   }

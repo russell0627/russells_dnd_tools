@@ -8,7 +8,7 @@ part 'theme_service.g.dart';
 
 @riverpod
 class ThemeService extends _$ThemeService {
-  static const colorScheme = FlexScheme.orangeM3;
+  static const colorScheme = FlexScheme.money;
 
   @override
   ThemeState build() {

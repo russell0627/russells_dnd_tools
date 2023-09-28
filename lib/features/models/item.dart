@@ -3,14 +3,15 @@ import 'package:recase/recase.dart';
 class Item {
   final String name;
   final String description;
+  final String? imageName;
 
-  Item({required this.name, required this.description});
+  Item({required this.name, required this.description, this.imageName});
 }
 
 class Weapon extends Item {
   final DamageSet damageSet;
 
-  Weapon({required this.damageSet, required super.name, required super.description});
+  Weapon({required this.damageSet, required super.name, required super.description, super.imageName});
 }
 
 class DamageSet {

@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import '../models/item.dart';
 
 Weapon? _weapon;
+String imagePath = "assets/images/";
 
 class ItemDisplay extends StatelessWidget {
   final Item item;
@@ -22,6 +23,7 @@ class ItemDisplay extends StatelessWidget {
       child: SeparatedColumn(
         separatorBuilder: () => boxM,
         children: [
+          ifUseImage(),
           Text(item.name),
           Text(_weapon?.damageSet.toString() ?? ""),
           Text(item.description),
@@ -29,4 +31,9 @@ class ItemDisplay extends StatelessWidget {
       ),
     );
   }
+
+  Widget ifUseImage() =>
+      hasImage ? Image(image: AssetImage(imagePath + item.imageName!)) : const Text("no image", style: TextStyle(fontSize: 8));
+
+  get hasImage => item.imageName != null;
 }

@@ -2,7 +2,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart' show Widget, EdgeInsets, Padding, Color, Colors;
-import 'package:uuid/uuid.dart';
+import "package:uuid/uuid.dart";
 
 const uuid = Uuid();
 
